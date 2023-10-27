@@ -1,35 +1,41 @@
-/*
- * Abstraction of every state
- */
-#include "state.h"
+#include <iostream>
 
-class Direction
-{
-    public:
-	/* default start is PositionB */
-	Direction::Direction(State *state) : state(new PositionB()) { }
-	/* move up from current position */
-	void up() {
-	     state->up();
+#include "direction.h"
+#include "position.h"
+
+class Position;
+
+	/* constructor */
+	Direction::Direction(Position *state) : state_(state) { }
+	/* change current state */
+	void Direction::changeState(Position *state) {
+		if (state != nullptr)
+		{
+			state_ = state;
+		}
 	}
-        /* move down from current position*/
-	void down() {
-	     state->down();
+	/* move up from current position */
+	void Direction::up() {
+		state_->up(this);
+	}
+        /* move down from current position */
+	void Direction::down() {
+		state_->down(this);
 	}
         /* move right from current position */
-	void right() {
-	     state->right();
+	void Direction::right() {
+		state_->right(this);
 	}
-        /* move left from current position */
-        void left() {
-	     state->left();
+	/* move left from current position */
+	void Direction::left() {
+		state_->left(this);
 	}
 	/* displays current state */
-	void currentPosition() {
-	     state->currentPosition();
+	void Direction::currentPosition() {
+		state_->currentPosition();
+	}
 	/* run */
-	void run;
-    private:
-	State *state;
-}
+	void Direction::run() {
+		std::cout << "I am running!\n";
+	}
 

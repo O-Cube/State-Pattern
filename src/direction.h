@@ -1,27 +1,35 @@
 /*
  * Abstraction of every state
  */
-#pragma once
-#include "state.h" 
+#ifndef DIRECTION_H
+#define DIRECTION_H
+
+#include "position.h"
+
+class Position;
 
 class Direction
 {
     public:
 	/* constructor */
-	Direction(State *state);
+	Direction(Position *state);
+	/* change current state */
+	void changeState(Position *state);
 	/* move up from current position */
-	void up() = 0;
+	void up();
         /* move down from current position */
-	void down() = 0;
+	void down();
         /* move right from current position */
-	void right() = 0;
-        /* move left from current position */
-        void left() = 0;
+	void right();
+	/* move left from current position */
+	void left();
 	/* displays current state */
 	void currentPosition();
 	/* run */
-	void run;
+	void run();
     private:
-	State *state;
-}
+	Position *state_;
+};
+
+#endif
 
