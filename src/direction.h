@@ -24,7 +24,7 @@ class Direction
 	/* move left from current position */
 	void left();
 	/* displays current state */
-	void currentPosition();
+	const char* currentPosition();
 	/* run */
 	void run();
     private:

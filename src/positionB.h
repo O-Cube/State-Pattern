@@ -1,5 +1,5 @@
  /*
- * Abstraction of every state
+ * positionB.h
  */
 #ifndef POSITIONB_H
 #define POSITIONB_H
@@ -23,7 +23,7 @@ class PositionB : public Position
         /* move left from current position */
 	void left(Direction *dir) override;
 	/* current position */
-	void currentPosition() override;
+	const char* currentPosition() override;
 };
 
 #endif // POSITIONB_H

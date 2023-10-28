@@ -12,11 +12,14 @@ int main()
 {
 	PositionB *posB = new PositionB();
 	Direction *direction = new Direction(posB);
-	direction->currentPosition();
+	std::cout << direction->currentPosition();
 	direction->left();
-	direction->currentPosition();
+	std::cout << direction->currentPosition();
+	direction->up();
+	std::cout << direction->currentPosition();
+	direction->down();
+	std::cout << direction->currentPosition();
 	
-	std::cout << "In main!\n";
 	return( 0 );
 }
  

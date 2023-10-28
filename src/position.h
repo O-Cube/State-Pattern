@@ -19,9 +19,9 @@ public:
         /* move left from current position */
 	virtual void left(Direction *dir) = 0;
 	/* current position */
-	virtual void currentPosition() = 0;
+	virtual const char* currentPosition() = 0;
 
-	Direction *direction_;
+	Direction *direction_ ;
 };
 
 #endif // POSITION_H

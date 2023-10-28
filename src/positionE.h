@@ -1,17 +1,17 @@
  /*
- * positionA.h
+ * positionE.h
  */
-#ifndef POSITIONA_H
-#define POSITIONA_H
+#ifndef POSITIONE_H
+#define POSITIONE_H
 
 #include "position.h"
 #include "direction.h"
 
 
-class PositionA: public Position {
+class PositionE: public Position {
 public:
 	/* constructor */
-	PositionA();
+	PositionE();
 	/* move up from current position */
 	void up(Direction *dir) override;
         /* move down from current position */
@@ -27,4 +27,4 @@ private:
 	void setDirection(Direction *dir);
 };
 
-#endif // POSITIONA_H
+#endif // POSITIONE_H

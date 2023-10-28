@@ -31,8 +31,8 @@ class Position;
 		state_->left(this);
 	}
 	/* displays current state */
-	void Direction::currentPosition() {
-		state_->currentPosition();
+	const char* Direction::currentPosition() {
+		return state_->currentPosition();
 	}
 	/* run */
 	void Direction::run() {
