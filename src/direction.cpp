@@ -34,8 +34,4 @@ class Position;
 	const char* Direction::currentPosition() {
 		return state_->currentPosition();
 	}
-	/* run */
-	void Direction::run() {
-		std::cout << "I am running!\n";
-	}
 

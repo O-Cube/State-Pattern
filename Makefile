@@ -30,9 +30,6 @@ $(EXECUTABLE): $(OBJS)
 # run application
 Run:
 	./$(EXECUTABLE)
-
-# clean
-.PHONY: clean
-
+	
 clean:
 	$(RM) -f $(OBJS) ./$(EXECUTABLE)

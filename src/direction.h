@@ -10,24 +10,22 @@ class Position;
 
 class Direction
 {
-    public:
+public:
 	/* constructor */
 	Direction(Position *state);
 	/* change current state */
 	void changeState(Position *state);
 	/* move up from current position */
 	void up();
-        /* move down from current position */
+	/* move down from current position */
 	void down();
-        /* move right from current position */
+	/* move right from current position */
 	void right();
 	/* move left from current position */
 	void left();
 	/* displays current state */
 	const char* currentPosition();
-	/* run */
-	void run();
-    private:
+private:
 	Position *state_;
 };
 
