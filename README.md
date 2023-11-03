@@ -9,7 +9,7 @@ This explains a finite state design pattern where the direction of movement depe
 ![image](https://github.com/O-Cube/State-Pattern/assets/65163799/521497d6-1c3a-404a-a4c6-a89940d760dd)
 
 # Requirements(linux Ubuntu):
-- g++ comiler
+- g++ compiler
 # Procedure:
 - clone repository
 - make -f Makefile to build the application
